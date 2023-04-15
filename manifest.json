@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Bitcoin Price Ticker",
+    "version": "1.0",
+    "description": "Displays the current Bitcoin price in Chrome.",
+    "action": {
+      "default_icon": {
+        "128": "images/bitcoin.png"
+      }
+    },
+    "icons": {
+        "128": "images/bitcoin.png"
+    },
+    "permissions": [
+      "https://api.coindesk.com/"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
