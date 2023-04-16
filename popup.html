@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       body {
+        background-color: #f5f5f5;
         font-family: Arial, sans-serif;
         margin: 16px;
         width: 300px; /* Keep the popup width at 300px */
       }
       h3 {
-        font-size: 18px;
+        font-size: 20px;
         margin: 16px 0 8px;
         color: #1e1e1e;
+        text-align: center;
       }
       p {
         font-size: 16px;
         margin: 8px 0;
         color: #545454;
+        text-align: center;
       }
       hr {
         border: 0.5px solid #e6e6e6;
@@ -60,33 +63,59 @@
       #currentPrice {
         font-weight: bold;
         color: #1e90ff;
+        text-align: center;
       }
       #btcValue,
       #satsToBtc {
         font-weight: bold;
         color: #1e90ff;
         margin-top: 8px;
+        text-align: center;
+      }
+      .btc-icon {
+        background: url('https://www.svgrepo.com/show/116697/bitcoin.svg') no-repeat;
+        width: 25px;
+        height: 25px;
+        background-size: contain;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+      }
+      .satoshi-icon {
+        background: url('https://www.svgrepo.com/show/116700/bitcoin.svg') no-repeat;
+        width: 25px;
+        height: 25px;
+        background-size: contain;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+      }
+      .logo {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
       }
     </style>
   </head>
   <body>
+    <img class="logo" style="width: 32px;" src="/images/bitcoin.png" alt="Bitcoin Logo">
     <h3>Current Bitcoin Price</h3>
-    <p id="currentPrice">Price: $0</p>
+    <p id="currentPrice">Price: $0 <span class="btc-icon"></span></p>
     <hr />
-    <h3>Bitcoin Value Calculator</h3>
-    <label for="btcAmount">Enter BTC amount:</label>
-    <input
-      type="text"
-      id="btcAmount"
-      inputmode="decimal"
-      pattern="[0-9]*[.,]?[0-9]*"
-    />
-    <p id="btcValue">Value: $0</p>
-    <hr />
-    <h3>Satoshi Converter</h3>
-    <label for="satsAmount">Enter amount in Satoshis:</label>
-    <input type="text" id="satsAmount" inputmode="numeric" pattern="[0-9]*" />
-    <p id="satsToBtc">BTC: 0</p>
-    <script src="popup.js"></script>
-  </body>
+<h3>Bitcoin Value Calculator</h3>
+<label for="btcAmount">Enter BTC amount:</label>
+<input
+  type="text"
+  id="btcAmount"
+  inputmode="decimal"
+  pattern="[0-9]*[.,]?[0-9]*"
+/>
+<p id="btcValue">Value: $0 <span class="btc-icon"></span></p>
+<hr />
+<h3>Satoshi Converter</h3>
+<label for="satsAmount">Enter amount in Satoshis:</label>
+<input type="text" id="satsAmount" inputmode="numeric" pattern="[0-9]*" />
+<p id="satsToBtc">BTC: 0 <span class="satoshi-icon"></span></p>
+<script src="popup.js"></script>
+</body>
 </html>
