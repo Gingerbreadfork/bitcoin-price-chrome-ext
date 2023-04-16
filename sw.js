@@ -2,7 +2,7 @@ function formatBadgeText(price) {
   if (price >= 10000) {
     return (price / 1000).toFixed(1);
   }
-  return price.toFixed(price % 1 === 0 ? 0 : 1);
+  return Math.floor(price * 10) / 10;
 }
 
 let currentPrice = 0;
