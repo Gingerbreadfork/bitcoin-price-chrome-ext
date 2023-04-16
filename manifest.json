@@ -11,6 +11,7 @@
     "service_worker": "sw.js"
   },
   "action": {
+    "default_popup": "popup.html",
     "default_icon": {
       "128": "/images/bitcoin.png"
     }

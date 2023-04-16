@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bitcoin Price Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 16px;
+        width: 300px; /* Keep the popup width at 300px */
+      }
+      h3 {
+        font-size: 18px;
+        margin: 16px 0 8px;
+        color: #1e1e1e;
+      }
+      p {
+        font-size: 16px;
+        margin: 8px 0;
+        color: #545454;
+      }
+      hr {
+        border: 0.5px solid #e6e6e6;
+        margin: 16px 0;
+      }
+      label {
+        display: block;
+        margin: 16px 0 8px;
+        font-size: 16px;
+        color: #1e1e1e;
+      }
+      input {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid #e6e6e6;
+        color: #1e1e1e;
+        box-sizing: border-box;
+      }
+      input:focus {
+        outline: none;
+        border-color: #1e90ff;
+      }
+      button {
+        display: block;
+        margin: 16px auto 8px;
+        font-size: 16px;
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: none;
+        background-color: #1e90ff;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover {
+        background-color: #1e80e6;
+      }
+      #currentPrice {
+        font-weight: bold;
+        color: #1e90ff;
+      }
+      #btcValue,
+      #satsToBtc {
+        font-weight: bold;
+        color: #1e90ff;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Current Bitcoin Price</h3>
+    <p id="currentPrice">Price: $0</p>
+    <hr />
+    <h3>Bitcoin Value Calculator</h3>
+    <label for="btcAmount">Enter BTC amount:</label>
+    <input
+      type="text"
+      id="btcAmount"
+      inputmode="decimal"
+      pattern="[0-9]*[.,]?[0-9]*"
+    />
+    <p id="btcValue">Value: $0</p>
+    <hr />
+    <h3>Satoshi Converter</h3>
+    <label for="satsAmount">Enter amount in Satoshis:</label>
+    <input type="text" id="satsAmount" inputmode="numeric" pattern="[0-9]*" />
+    <p id="satsToBtc">BTC: 0</p>
+    <script src="popup.js"></script>
+  </body>
+</html>
