@@ -115,6 +115,17 @@
     <h3>Current Bitcoin Price</h3>
     <p id="currentPrice">Price: $0 <span class="btc-icon"></span></p>
     <hr />
+    <label for="currency">Select currency:</label>
+    <select id="currency">
+      <option value="USD">USD</option>
+      <option value="CAD">CAD</option>
+      <option value="AUD">AUD</option>
+      <option value="NZD">NZD</option>
+      <option value="EUR">EUR</option>
+      <option value="GBP">GBP</option>
+      <!-- Add more currencies as needed -->
+    </select>
+    <hr />
     <h3>Bitcoin Value Calculator</h3>
     <label for="btcAmount">Enter BTC amount:</label>
     <input
@@ -129,6 +140,6 @@
     <label for="satsAmount">Enter amount in Satoshis:</label>
     <input type="text" id="satsAmount" inputmode="numeric" pattern="[0-9]*" />
     <p id="satsToBtc">BTC: 0 <span class="satoshi-icon"></span></p>
-    <script src="popup.js"></script>
+    <script src="popup.js" defer></script>
   </body>
 </html>

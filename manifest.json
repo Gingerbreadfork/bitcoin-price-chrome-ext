@@ -6,7 +6,7 @@
   "icons": {
     "128": "/images/bitcoin.png"
   },
-  "permissions": ["alarms"],
+  "permissions": ["alarms", "storage"],
   "background": {
     "service_worker": "sw.js"
   },
